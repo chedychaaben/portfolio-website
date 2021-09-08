@@ -113,10 +113,7 @@ USE_TZ = True
 
 STATIC_URL = '/templates/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR,'templates'),
-
-)
+STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
 MEDIA_URL = '/media/' #The Link That Django will add or display while accessing to media Files
 
