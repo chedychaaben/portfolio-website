@@ -14,10 +14,6 @@ SECRET_KEY = 'django-insecure-_d805un5f7drb0tms#930j*&*4!@26^d%=jsuv928+&6ur3i6y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-#Get Local IP
-import socket
-local_ip = str(socket.gethostbyname(socket.gethostname()))
-
 ALLOWED_HOSTS = ["chedy.herokuapp.com", "127.0.0.1"]
 
 # Application definition
@@ -34,7 +30,8 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
+  # 'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
