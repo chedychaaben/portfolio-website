@@ -112,6 +112,8 @@ STATIC_URL = '/templates/'
 
 STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 
+STATICFILES_DIRS = (os.path.join(BASE_DIR,'templates'),)
+
 MEDIA_URL = '/media/' #The Link That Django will add or display while accessing to media Files
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #The Foleder where they are located in the project DIRS
