@@ -27,6 +27,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Local apps
     'apps.portfolio.apps.PortfolioappConfig'
+
+    # 3rd party apps
+    'cloudinary_storage', 
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -116,9 +120,18 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR,'templates'),)
 
 MEDIA_URL = '/media/' #The Link That Django will add or display while accessing to media Files
 
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #The Foleder where they are located in the project DIRS
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'chedychaabenportfolio',
+    'API_KEY': '268867845918317',
+    'API_SECRET': '9yHvMvO8Sp-1Ck-wlcx1CFnO4mo',
+}
