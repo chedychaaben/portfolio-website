@@ -26,7 +26,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # Local apps
-    'apps.portfolio.apps.PortfolioappConfig'
+    'apps.portfolio.apps.PortfolioappConfig',
 
     # 3rd party apps
     'cloudinary_storage', 
