@@ -136,7 +136,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR,'templates'),)
 
 MEDIA_URL = '/media/' #The Link That Django will add or display while accessing to media Files
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.RawMediaCloudinaryStorage' #this adds as storage in every image or file model line
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage' #this adds as storage in every image or file model line //Three options (Image,Raw(pdf,txt),Vedio)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media') #The Foleder where they are located in the project DIRS
 
