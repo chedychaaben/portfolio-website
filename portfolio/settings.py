@@ -1,7 +1,13 @@
 from pathlib import Path
 import os
 
-prod = False
+# settings.py
+import os
+from dotenv import load_dotenv, find_dotenv
+
+load_dotenv(find_dotenv())
+
+prod = os.environ.get("prod") == 'True'
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -11,7 +17,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-_d805un5f7drb0tms#930j*&*4!@26^d%=jsuv928+&6ur3i6y'
+SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if prod:
@@ -19,7 +25,7 @@ if prod:
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "chedychaaben.com", "chaaben.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "chedychaaben.com", "chaaben.com", "www.chedychaaben.com"]
 
 # Application definition
 
@@ -32,7 +38,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # Local apps
     'apps.portfolio.apps.PortfolioappConfig',
-
     # 3rd party apps
     'cloudinary_storage', 
     'cloudinary',
@@ -119,21 +124,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'templates','static'),
 )
 STATIC_ROOT = os.path.join(BASE_DIR, 'templates', 'collectedstaticfilesforprod')
-
-'''
-if prod:
-    STATIC_ROOT = os.path.join(BASE_DIR, 'templates', 'collectedstaticfilesforprod')
-else:
-    STATICFILES_DIRS = (
-        os.path.join(BASE_DIR,'templates','static'),
-    )
-'''
-
 
 MEDIA_URL = '/media/' #The Link That Django will add or display while accessing to media Files
 
