@@ -1,6 +1,8 @@
 from pathlib import Path
 import os
 
+prod = False
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -12,9 +14,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-_d805un5f7drb0tms#930j*&*4!@26^d%=jsuv928+&6ur3i6y'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+if prod:
+    DEBUG = False
+else:
+    DEBUG = True
 
-ALLOWED_HOSTS = ["chedy.herokuapp.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["127.0.0.1", "chedychaaben.com", "chaaben.com"]
 
 # Application definition
 
@@ -70,24 +75,9 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 DATABASES = {
     #Default SQLITE3
-    #'default': {
-    #    'ENGINE': 'django.db.backends.sqlite3',
-    #    'NAME': BASE_DIR / 'db.sqlite3',
-    #}
     'default': {
-
-        'ENGINE': 'django.db.backends.postgresql',
-
-        'NAME': 'dfvbko921smg8a',
-
-        'USER': 'mydwtqmfmjbxgp',
-
-        'PASSWORD': 'b3001df3feee38638ff4ec0ff2d49bdcbe8a5de9fbca74d30d96bb018bd9f4f3',
-
-        'HOST': 'ec2-54-74-95-84.eu-west-1.compute.amazonaws.com',
-
-        'PORT': '5432',
-
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
@@ -128,11 +118,22 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/templates/'
+STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR,'templates','static'),
+)
+STATIC_ROOT = os.path.join(BASE_DIR, 'templates', 'collectedstaticfilesforprod')
 
-STATICFILES_DIRS = (os.path.join(BASE_DIR,'templates'),)
+'''
+if prod:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'templates', 'collectedstaticfilesforprod')
+else:
+    STATICFILES_DIRS = (
+        os.path.join(BASE_DIR,'templates','static'),
+    )
+'''
+
 
 MEDIA_URL = '/media/' #The Link That Django will add or display while accessing to media Files
 

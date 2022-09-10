@@ -70,7 +70,7 @@
         });
     /* Theme Change Handeling*/
     theme = localStorage.getItem('theme');
-    let static = "templates/static/css/"
+    let static = "static/css/"
     if(theme == null){
         setTheme('purple')
     }else{

@@ -12,7 +12,7 @@
     <!--Title Tag-->
     <title>Chedy Chaaben – Full-Stack Developer</title>
     <!--Link Tags-->
-    <link href="{% static "static/css/style.css" %}?v={% now "HMf" %}" rel="stylesheet">
+    <link href="{% static "css/style.css" %}?v={% now "HMf" %}" rel="stylesheet">
     <link id="theme-style" rel="stylesheet">
     {% if preview %}
     <link rel="icon" href="{{preview.iconsite.url}}">
@@ -27,7 +27,7 @@
 <body>
     <div class="spinner-wrapper">
         <div class="spinner" style="width: 100px;height: 100px;">
-            <img src="{% static "static/img/siteicon.png" %}" style="width: 100px;height: 100px;">
+            <img src="{% static "img/siteicon.png" %}" style="width: 100px;height: 100px;">
         </div>    
     </div>
     <div id="return-to-top">
@@ -62,5 +62,5 @@
         </div>
     </footer>   
     <!--Local JS-->
-    <script src="{% static "/static/js/main.js" %}?v={% now "HMf" %}"></script>
+    <script src="{% static "js/main.js" %}?v={% now "HMf" %}"></script>
 </body>
