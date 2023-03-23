@@ -1,66 +1,53 @@
-{% load static %} 
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!--Meta Tags-->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Chedy Chaaben">
-    <meta name="description" content="Chedy Chaaben, Full-Stack Developer, Portfolio Site, RESMUE">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="content-language" content="en-us">
-    <!--Title Tag-->
-    <title>Chedy Chaaben – Full-Stack Developer</title>
-    <!--Link Tags-->
-    <link href="{% static "css/style.css" %}?v={% now "HMf" %}" rel="stylesheet">
-    <link id="theme-style" rel="stylesheet">
-    {% if preview %}
-    <link rel="icon" href="{{preview.iconsite.url}}">
-    {% endif %}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    
-    <!--Jquery-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Meta Tags-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Chedy Chaaben">
+  <meta name="description" content="Chedy Chaaben, Full-Stack Developer, Portfolio Site, RESMUE">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-language" content="en-us">
+  <!--Meta Tags-->
+
+  <title>Chedy Chaaben - Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="icon" type="image/x-icon" href="{% static "images/my-profile-image.png"%}?v={% now "HMf" %}">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="{% static "css/style.css" %}?v={% now "HMf" %}">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <div class="spinner-wrapper">
-        <div class="spinner" style="width: 100px;height: 100px;">
-            <img src="{% static "img/siteicon.png" %}" style="width: 100px;height: 100px;">
-        </div>    
-    </div>
-    <div id="return-to-top">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 612.002 612.002" xml:space="preserve"><g><g><path d="M592.639,358.376L423.706,189.439c-64.904-64.892-170.509-64.892-235.421,0.005L19.363,358.379    c-25.817,25.817-25.817,67.674,0,93.489c25.817,25.817,67.679,25.819,93.491-0.002l168.92-168.927    c13.354-13.357,35.092-13.361,48.444-0.005l168.93,168.932c12.91,12.907,29.825,19.365,46.747,19.365    c16.915,0,33.835-6.455,46.747-19.365C618.456,426.051,618.456,384.193,592.639,358.376z"/></g></g></svg>
-    </div>
-    <header>
-        <nav id="headerNavigation">
-            <a href="/">
-                <h3>Chedy Chaaben</h3>
-            </a>
-            {% block rightNav %}{% endblock rightNav %}
-        </nav>
-    </header>
 {% block content %}
 
 
 {% endblock content %}
-    <footer>
-        <div class="footer-wrapper">
-            <span>Designed & Built by Chedy Chaaben</span>
-            {% if preview %}
-            <div class="footer-social">
-                <a href="{{preview.igurl}}" aria-label="Instagram" target="_blank" rel="noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-instagram"><title>Instagram</title><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-                </a>
-                <a href="{{preview.giturl}}" aria-label="GitHub" target="_blank" rel="noreferrer">
-                    <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><title>GitHub</title><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                </a>
-            </div>
-            {% endif %}
-            <span>© 2021. No coockies here <img src="https://image.flaticon.com/icons/png/512/808/808851.png" width="20" height="20" alt="Coockies"></span>
-        </div>
-    </footer>   
-    <!--Local JS-->
-    <script src="{% static "js/main.js" %}?v={% now "HMf" %}"></script>
+<!--
+  - custom js link
+-->
+<script src="{% static "js/script.js" %}?v={% now "HMf" %}"></script>
+
+<!--
+  - ionicon link
+-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
