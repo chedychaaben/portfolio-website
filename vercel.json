@@ -15,12 +15,5 @@
       "src": "/(.*)",
       "dest": "portfolio/wsgi.py"
     }
-  ],
-
-  "functions": {
-    "api": {
-      "runtime": "python3.9", 
-      "includeFiles": ["requirements_prod.txt"]
-    }
-  }
+  ]
 }
