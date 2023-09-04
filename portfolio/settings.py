@@ -138,7 +138,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'templates','static'),
 )
-STATIC_ROOT = os.path.join(BASE_DIR, 'templates', 'collectedstaticfilesforprod')
+
+STATIC_ROOT = os.path.join(BASE_DIR ,'staticfiles_build_vercel')
 
 MEDIA_URL = '/media/' #The Link That Django will add or display while accessing to media Files
 
