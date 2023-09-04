@@ -8,13 +8,6 @@
       "config": {
         "maxLambdaSize": "50mb"
       }
-    },
-    {
-      "src": "build_files.sh",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "staticfiles_build_vercel"
-      }
     }
   ],
   "routes": [
@@ -22,5 +15,12 @@
       "src": "/(.*)",
       "dest": "portfolio/wsgi.py"
     }
-  ]
+  ],
+
+  "functions": {
+    "api": {
+      "runtime": "python3.9", 
+      "includeFiles": ["requirements_prod.txt"]
+    }
+  }
 }
