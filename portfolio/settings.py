@@ -29,7 +29,7 @@ if prod:
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "chedychaaben.com", "www.chedychaaben.com", "chaaben.com", "www.chaaben.com", "*.vercel.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "chedychaaben.com", "www.chedychaaben.com", "chaaben.com", "www.chaaben.com", ".vercel.app"]
 
 # Application definition
 
