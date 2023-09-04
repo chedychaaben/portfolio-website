@@ -3,14 +3,6 @@ import os
 
 # settings.py
 import os
-'''
-from dotenv import load_dotenv, find_dotenv
-
-load_dotenv(find_dotenv())
-
-prod = os.environ.get("prod") == 'True'
-'''
-prod = True 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,10 +16,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-_d805un5f7drb0tms#930j*&*4!@26^d%=jsuv928+&6ur3i6y"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-if prod:
-    DEBUG = False
-else:
-    DEBUG = True
+DEBUG = True
 
 ALLOWED_HOSTS = ["127.0.0.1", "chedychaaben.com", "www.chedychaaben.com", "chaaben.com", "www.chaaben.com", ".vercel.app"]
 
@@ -143,7 +132,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'templates','static'),
 )
 
-STATIC_ROOT = os.path.join(BASE_DIR ,'staticfiles_build_vercel')
+STATIC_ROOT = os.path.join(BASE_DIR ,'templates/static')
 
 MEDIA_URL = '/media/' #The Link That Django will add or display while accessing to media Files
 
