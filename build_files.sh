@@ -1,2 +1,2 @@
-pip install -r requirements_prod.txt
+pip install -r reqtayara.txt
 python3.9 manage.py collectstatic --noinput
