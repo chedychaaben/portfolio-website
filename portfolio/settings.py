@@ -3,11 +3,14 @@ import os
 
 # settings.py
 import os
+'''
 from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
 
 prod = os.environ.get("prod") == 'True'
+'''
+prod = True 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -17,7 +20,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+#SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = "django-insecure-_d805un5f7drb0tms#930j*&*4!@26^d%=jsuv928+&6ur3i6y"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if prod:
