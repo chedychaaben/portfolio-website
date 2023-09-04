@@ -25,7 +25,7 @@ if prod:
 else:
     DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "chedychaaben.com", "chaaben.com", "www.chedychaaben.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "chedychaaben.com", "www.chedychaaben.com", "chaaben.com", "www.chaaben.com", "*.vercel.com"]
 
 # Application definition
 
@@ -78,6 +78,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+'''
 DATABASES = {
     #Default SQLITE3
     'default': {
@@ -85,7 +86,17 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
+'''
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql', 
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': 'D7GQmEHNLt9P',
+        'HOST': 'ep-wild-cake-70203490.us-east-1.postgres.vercel-storage.com',
+        'PORT': '5432',
+    }
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
