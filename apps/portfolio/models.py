@@ -46,3 +46,11 @@ class ProjectImage(models.Model):
 
     def __str__(self):
         return f'{self.image}'
+
+class ContactForm(models.Model):
+    full_name = models.CharField(max_length=255, null=True, blank=True)
+    email = models.EmailField(max_length=255, null=True, blank=True)
+    message = models.TextField()
+
+    def __str__(self):
+        return self.full_name

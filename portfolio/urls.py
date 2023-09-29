@@ -10,7 +10,8 @@ from apps.portfolio import views as portfolioviews
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', portfolioviews.homepage, name="homepage")
+    path('', portfolioviews.homepage, name="homepage"),
+    path('contactform/', portfolioviews.contactform, name="contactform")
 ]
 
 if not settings.DEBUG:

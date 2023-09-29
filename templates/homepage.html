@@ -16,14 +16,19 @@
     <div class="sidebar-info">
 
       <figure class="avatar-box">
-        <img src="{% static "images/my-profile-image.png"%}" alt="Chedy Chaaben" width="100">
+        <img class="avatar-box" src="{% static "images/MY PIC_300x300.png"%}" alt="Chedy Chaaben" width="100">
       </figure>
 
       <div class="info-content">
         <h1 class="name" title="Chedy Chaaben">
-          Chedy C.
+          Chedy Chaaben
         </h1>
-        <p class="title">Data Engineer & Web Scraping Specialist</p>
+        <div class="display: flex;">
+          <p class="title">Data Engineer</p>
+          <p class="title">Web Scraping Specialist</p>
+          <p class="title">Django Developer</p>
+          <p class="title">BI Developer</p>
+        </div>
       </div>
 
       <button class="info_more-btn" data-sidebar-btn>
@@ -49,7 +54,7 @@
           <div class="contact-info">
             <p class="contact-title">Email</p>
 
-            <a href="mailto:chedychaaben@gmail.com" class="contact-link">chedychaaben@gmail.com</a>
+            <a href="mailto:pleaseusethecontactform@chedychaaben.com" class="contact-link">private</a>
           </div>
 
         </li>
@@ -108,6 +113,12 @@
           </a>
         </li>
 
+        <li class="social-item">
+          <a href="https://www.linkedin.com/in/chedy-chaaben-154391157/" class="social-link">
+            <ion-icon name="logo-linkedin" size="large" ></ion-icon>
+          </a>
+        </li>
+
       </ul>
       
     </div>
@@ -144,6 +155,10 @@
         </li>
 
         
+        <li class="navbar-item">
+          <button class="navbar-link" data-nav-link>Blog</button>
+        </li>
+
         <li class="navbar-item">
           <button class="navbar-link" data-nav-link>Contact</button>
         </li>
@@ -214,7 +229,7 @@
                   <ion-icon name="eye-outline"></ion-icon>
                 </div>
 
-                <img src="{% static "images/project-2.png"%}" alt="Emoji AI" loading="lazy">
+                <img src="{% static "images/projectEmojiAI.jpg"%}" alt="Emoji AI" loading="lazy">
               </figure>
 
               <h3 class="project-title">Emoji AI</h3>
@@ -230,7 +245,7 @@
 
     </article>
 
-
+    
     <!--
       - #ABOUT
     -->
@@ -242,42 +257,25 @@
       </header>
 
       <section class="about-text">
-        <p>
-          Developing responsive websites and web applications using modern frameworks like React.
-        </p>
-
-        <p>
-          Building back-end systems using Python and popular frameworks like Django, FastAPI and Streamlit.
-        </p>
-        
-        <p>
-          Extracting data from websites and APIs using Python libraries like Beautiful Soup and Selenium.
-        </p>
-
-        <p>
-          Working with databases like MySQL, PostgreSQL, and MongoDB to store and manage data.
-        </p>
-
-        <p>
-          Deploying web applications to cloud platforms like AWS and Heroku.
-        </p>
-
-      </section>
-
-    </article>
-
-
-    <!--
-      - #ABOUT
-    -->
-
-    <article class="about" data-page="about">
-
-      <header>
-        <h2 class="h2 article-title">About me</h2>
-      </header>
-
-      <section class="about-text">
+          <p>
+            Developing responsive websites and web applications using modern frameworks like React.
+          </p>
+  
+          <p>
+            Building back-end systems using Python and popular frameworks like Django, FastAPI and Streamlit.
+          </p>
+          
+          <p>
+            Extracting data from websites and APIs using Python libraries like Beautiful Soup and Selenium.
+          </p>
+  
+          <p>
+            Working with databases like MySQL, PostgreSQL, and MongoDB to store and manage data.
+          </p>
+  
+          <p>
+            Deploying web applications to cloud platforms like AWS and Heroku.
+          </p>
 
         <p>
           A Python developer with a degree in Data Analytics and Big Data, offering Web Scraping & Data Pipeline services.
@@ -477,102 +475,7 @@
       </div>
 
       </section>
-
-    </article>
-
-    <!--
-      - #RESUME
-    -->
-
-    <article class="resume" data-page="resume">
-
-      <header>
-        <h2 class="h2 article-title">Resume</h2>
-      </header>
-
-      <section class="timeline">
-
-        <div class="title-wrapper">
-          <div class="icon-box">
-            <ion-icon name="book-outline"></ion-icon>
-          </div>
-
-          <h3 class="h3">Education</h3>
-        </div>
-
-        <ol class="timeline-list">
-
-          <li class="timeline-item">
-
-            <a href="https://iit.tn/">
-              <h4 class="h4 timeline-item-title">International Institute Of Technology</h4>
-            </a>
-
-            <span>Computer Science Engineering</span>
-
-          </li>
-          
-          <li class="timeline-item">
-
-            <a href="https://isimsf.rnu.tn/">
-              <h4 class="h4 timeline-item-title">Higher Institute of Computer Science and Multimedia</h4>
-            </a>
-
-            <span>Bachelor's Degree in Data Analytics and Big Data</span>
-
-          </li>
-
-          <li class="timeline-item">
-
-            <h4 class="h4 timeline-item-title">High school</h4>
-
-            <span></span>
-
-            <p class="timeline-text">
-            </p>
-
-          </li>
-
-        </ol>
-
-      </section>
       
-      <section class="timeline">
-
-        <div class="title-wrapper">
-          <div class="icon-box">
-            <ion-icon name="book-outline"></ion-icon>
-          </div>
-
-          <h3 class="h3">Languages</h3>
-        </div>
-
-        <ol class="timeline-list">
-
-          <li class="timeline-item">
-
-            <h4 class="h4 timeline-item-title">English</h4>
-
-            <p class="timeline-text">
-              Native
-            </p>
-
-          </li>
-
-          <li class="timeline-item">
-
-            <h4 class="h4 timeline-item-title">French</h4>
-
-            <p class="timeline-text">
-              Native
-            </p>
-
-          </li>
-
-        </ol>
-
-      </section>
-
       <section class="skill">
 
         <h3 class="h3 skills-title">My skills</h3>
@@ -621,14 +524,71 @@
         </ul>
 
       </section>
+      
+    </article>
 
-      <br>
+    <!--
+      - #RESUME
+    -->
+
+    <article class="resume" data-page="resume">
+
+      <header>
+        <h2 class="h2 article-title">Resume</h2>
+      </header>
 
       <section class="timeline">
 
         <div class="title-wrapper">
           <div class="icon-box">
-            <ion-icon name="book-outline"></ion-icon>
+            <ion-icon name="school-outline"></ion-icon>
+          </div>
+
+          <h3 class="h3">Education</h3>
+        </div>
+
+        <ol class="timeline-list">
+
+          <li class="timeline-item">
+            <div class="social-item" style="display: flex;">
+              <h4 class="h4 timeline-item-title">North Amercian Private University</h4>
+              <a href="https://nau.tn/" class="social-link" target="_blank">
+                <ion-icon name="open-outline" size="small" ></ion-icon>
+              </a>
+            </div>
+            <span>Engineer's degree, Computer Science Engineering</span>
+          </li>
+          
+          <li class="timeline-item">
+            <div class="social-item" style="display: flex;">
+              <h4 class="h4 timeline-item-title">Higher Institute of Computer Science and Multimedia</h4>
+              <a href="https://isimsf.rnu.tn/" class="social-link" target="_blank">
+                <ion-icon name="open-outline" size="small" ></ion-icon>
+              </a>
+            </div>
+            <span>Bachelor's Degree in Data Analytics and Big Data</span>
+          </li>
+
+          <li class="timeline-item">
+
+            <h4 class="h4 timeline-item-title">High school</h4>
+
+            <span></span>
+
+            <p class="timeline-text">
+            </p>
+
+          </li>
+
+        </ol>
+
+      </section>
+      
+      <section class="timeline">
+
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <ion-icon name="ribbon-outline"></ion-icon>
           </div>
 
           <h3 class="h3">Certifications</h3>
@@ -637,55 +597,146 @@
         <ol class="timeline-list">
 
           <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">University of Michigan</h4>
+            <span>Using Python to Access Web Data</span>
+            <h4 class="timeline-text">Certification ID: UZT5ELM6SKMR</h4>
+            <div class="social-item" style="display: flex;">
+              <h4 class="timeline-text">Verify At</h4>
+              <a href="https://coursera.org/verify/UZT5ELM6SKMR" class="social-link" target="_blank">
+                <ion-icon name="open-outline" size="small" ></ion-icon>
+              </a>
+            </div>
+          </li>
 
-            <h4 class="h4 timeline-item-title">AWS S3 Basics</h4>
-
-            <p class="timeline-text">
-              Native
-            </p>
-            Provider:University of Michigan
-            Issued: 
-            Verify Link :
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Coursera Project Network</h4>
+            <span>AWS S3 Basics</span>
+            <h4 class="timeline-text">Certification ID: M9VC32EDJCKF</h4>
+            <div class="social-item" style="display: flex;">
+              <h4 class="timeline-text">Verify At</h4>
+              <a href="https://coursera.org/verify/M9VC32EDJCKF" class="social-link" target="_blank">
+                <ion-icon name="open-outline" size="small" ></ion-icon>
+              </a>
+            </div>
           </li>
 
         </ol>
 
       </section>
 
+      <section class="timeline">
+
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <ion-icon name="stats-chart-outline"></ion-icon>
+          </div>
+
+          <h3 class="h3">Professional experiences</h3>
+        </div>
+
+        <ol class="timeline-list">
+
+          <li class="timeline-item">
+            <div class="social-item" style="display: flex;">
+              <h4 class="h4 timeline-item-title">PERFAXIS</h4>
+              <a href="https://www.linkedin.com/company/ste-perfaxis/" class="social-link" target="_blank">
+                <ion-icon name="open-outline" size="small" ></ion-icon>
+              </a>
+            </div>
+            <!--
+            <p class="certifications-text">
+              High-quality
+            </p>-->
+            <span>Junior BI Developer (Internship)</span>
+            <div class="skills-content">
+              <p class="title">SQL Server Integration Services</p>
+              <p class="title">SQL Server Reporting Services</p>
+              <p class="title">SQL Server Management Studio</p>
+              <p class="title">Microsoft Power BI</p>
+            </div>
+          </li>
+
+
+          <li class="timeline-item">
+            <div class="social-item" style="display: flex;">
+              <h4 class="h4 timeline-item-title">Piximind</h4>
+              <a href="https://www.piximind.com/" class="social-link" target="_blank">
+                <ion-icon name="open-outline" size="small" ></ion-icon>
+              </a>
+            </div>
+            <!--
+            <p class="certifications-text">
+              High-quality
+            </p>-->
+            <span>Full Stack web developer (Internship)</span>
+            <div class="skills-content">
+              <p class="title">FastAPI</p>
+              <p class="title">ReactJS</p>
+              <p class="title">MongoDB</p>
+              <p class="title">TensorFlow BERT Model</p>
+            </div>
+          </li>
+
+        </ol>
+
+      </section>
 
       <section class="timeline">
 
         <div class="title-wrapper">
           <div class="icon-box">
-            <ion-icon name="book-outline"></ion-icon>
+            <ion-icon name="planet-outline"></ion-icon>
           </div>
 
-          <h3 class="h3">Proffesional experience</h3>
+          <h3 class="h3">Languages</h3>
         </div>
 
         <ol class="timeline-list">
 
           <li class="timeline-item">
 
-            <h4 class="h4 timeline-item-title">Inetrship</h4>
+            <h4 class="h4 timeline-item-title">English</h4>
 
             <p class="timeline-text">
               Native
             </p>
+
           </li>
-          Junior BI Developer (SQL Server 2019) | Internship | STE PERFAXIS
- 
-          February 2023 - May 2023
-          Data Scraping, Mining, ML, FARM Stack | Internship | Piximind.com
-           
-          July 2022 - August 2022
-          Summer Internship Job
+
+          <li class="timeline-item">
+
+            <h4 class="h4 timeline-item-title">French</h4>
+
+            <p class="timeline-text">
+              Native
+            </p>
+
+          </li>
+
         </ol>
 
       </section>
+
     </article>
 
 
+    <!--
+      - #BLOG
+    -->
+
+    <article class="blog" data-page="blog">
+
+      <header>
+        <h2 class="h2 article-title">blog</h2>
+      </header>
+
+      <section class="blog-form">s
+
+      </section>
+
+    </article>
+
+    
     <!--
       - #CONTACT
     -->
@@ -698,10 +749,11 @@
 
       <section class="contact-form">
 
-        <form action="#" class="form" data-form>
+        <form action="contactform/" method="POST" class="form" data-form>
+          {% csrf_token %}
 
           <div class="input-wrapper">
-            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+            <input type="text" name="full_name" class="form-input" placeholder="Full name" required data-form-input>
 
             <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
           </div>
@@ -723,4 +775,5 @@
   </div>
 
 </main>
+meta pour seo best practice
 {% endblock content %}

@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from .models import Preview, Quote, Skill, Project
+from .models import Preview, Quote, Skill, Project, ContactForm
+from django.http import HttpResponse
+
 
 # Create your views here.
 def homepage(request):
@@ -15,3 +17,13 @@ def homepage(request):
         'projects' : projects
     }
     return render(request, 'homepage.html', context=context)
+
+def contactform(request):
+    if request.method == 'POST':
+        full_name = request.POST.get('full_name')
+        email = request.POST.get('email')
+        message = request.POST.get('message')
+        ContactForm.objects.create(full_name=full_name, email=email, message=message)
+        return HttpResponse(f'Thank you {full_name}')
+    else:
+        return HttpResponse(f'Message not saved :/')

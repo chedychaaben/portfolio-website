@@ -334,9 +334,24 @@ main {
   font-weight: var(--fw-300);
   width: max-content;
   padding: 3px 12px;
+  margin : 6px;
   border-radius: 8px;
 }
 
+.skills-content{
+  display: flex;
+}
+
+.skills-content .title {
+  color: var(--white-1);
+  background: var(--onyx);
+  font-size: var(--fs-8);
+  font-weight: var(--fw-300);
+  width: max-content;
+  padding: 3px 12px;
+  margin : 6px;
+  border-radius: 8px;
+}
 .info_more-btn {
   position: absolute;
   top: -15px;
@@ -590,6 +605,17 @@ main {
   overflow: hidden;
 }
 
+.certifications-text {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-300);
+  line-height: 1.6;
+  display: -webkit-box;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 
 /**
  * #testimonials-modal
