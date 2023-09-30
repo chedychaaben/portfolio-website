@@ -5,8 +5,6 @@ from django.http import HttpResponse
 
 # Create your views here.
 def homepage(request):
-    
-    print("Welcome User!<br>You are visiting from: {}".format(ip))
     last_preview = Preview.objects.last()
     quotes  = Quote.objects.all()
     skills  = Skill.objects.all()
