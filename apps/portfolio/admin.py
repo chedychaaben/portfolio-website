@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Preview, Quote, Skill, Project,ProjectTech , ProjectImage, ContactForm
+from .models import Preview, Quote, Skill, Project,ProjectTech , ProjectImage, ContactForm, Visit
 # Register your models here.
 admin.site.register(Preview)
 admin.site.register(Quote)
@@ -9,3 +9,4 @@ admin.site.register(Project)
 admin.site.register(ProjectTech)
 admin.site.register(ProjectImage)
 admin.site.register(ContactForm)
+admin.site.register(Visit)

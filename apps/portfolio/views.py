@@ -1,14 +1,29 @@
 from django.shortcuts import render
-from .models import Preview, Quote, Skill, Project, ContactForm
+from .models import Preview, Quote, Skill, Project, ContactForm, Visit
 from django.http import HttpResponse
 
 
 # Create your views here.
 def homepage(request):
+    
+    print("Welcome User!<br>You are visiting from: {}".format(ip))
     last_preview = Preview.objects.last()
     quotes  = Quote.objects.all()
     skills  = Skill.objects.all()
     projects  = Project.objects.all()
+
+    # Saving Request and Ip
+    
+    try:
+        user_ip = request.META.get('HTTP_X_FORWARDED_FOR')
+        if user_ip:
+            ip = user_ip.split(',')[0]
+        else:
+            ip = request.META.get('REMOTE_ADDR')
+        Visit.objects.create(ip=ip)
+    except:
+        pass
+
 #Someone opened your portfolio website at with when Home function,
     context =  {
         'preview' : last_preview,
